@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: linear-gradient(to left, #A9C9FF, #FFBBEC);
+}
+
+.container {
+    background-color: #fff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 5rem;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 20rem;
+}
+
+.container-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form-label {
+    position: absolute;
+    top: -0.5rem;
+    left: 0.5rem;
+    background-color: #fff;
+    padding: 0 0.5rem;
+    font-size: 0.8rem;
+}
+
+.form-input {
+    padding: 1rem;
+    outline: none;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.form-successicon,
+.form-erroricon {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 24px;
+    display: none;
+}
+
+.form-successicon {
+    fill: #00c853;
+}
+
+.form-erroricon {
+    fill: #ff1744;
+}
+
+.form-message {
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+    color: #e62e1b;
+    display: none;
+}
+/*success and error state*/
+
+.form-success input{
+    border: 1px solid #008f39;
+}
+
+.form-success svg.form-successicon{
+    display: block;
+}
+
+.form-error input{
+    border: 1px solid #e62e1b;
+}
+
+.form-error svg.form-erroricon{
+    display: block;
+}
+
+.form-error p, .form-message{
+    display: block;
+}
+/*end state */
+
+.btn {
+    margin-bottom: 20px;
+    padding: 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(to left, #A9C9FF, #FFBBEC);
+    background-size: 150%;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-position: right;
+}
+
+.form-error > #toggle, .form-success > #toggle {
+    right: 45px;
+}
+
+#toggle{
+    position: absolute;
+    right: 15px;
+    margin-top: 30px;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background: url(./img/show.png);
+    background-size: cover;
+    cursor: pointer;
+}
+
+#toggle.hide{
+    background: url(./img/hide.png);
+    background-size: cover;
+}
